@@ -3,37 +3,14 @@ return {
   {
     "hrsh7th/nvim-cmp",
     version = false, -- last release is way too old
-    event = "InsertEnter",
+    -- event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "f3fora/cmp-spell",
     },
-
-    opts = function()
-      local cmp = require("cmp")
-      return {
-        mapping = cmp.mapping.preset.insert({
-          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-          ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<C-Space>"] = cmp.mapping.complete(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
-          ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-          -- ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-          ["<C-CR>"] = function(fallback)
-            cmp.abort()
-            fallback()
-          end,
-        }),
-        sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "path" },
-        }, {
-          { name = "buffer" },
-          { name = "snippets"},
-        }),
-      }
-    end,
   },
 
   -- auto pairs
@@ -106,16 +83,16 @@ return {
       "SilverofLight/cmp-latex-symbols",
     },
     opts = function(_, opts)
-      table.insert(opts.sources, {
-        name = "latex_symbols",
-        option = {
-          strategy = 0,
-        },
-        -- if the file is not markdown, then this plugin will not work
-        entry_filter = function()
-          return vim.bo.filetype == "markdown"
-        end,
-      })
+      -- table.insert(opts.sources, {
+      --   name = "latex_symbols",
+      --   option = {
+      --     strategy = 0,
+      --   },
+      --   -- if the file is not markdown, then this plugin will not work
+      --   entry_filter = function()
+      --     return vim.bo.filetype == "markdown"
+      --   end,
+      -- })
     end,
   },
 }

@@ -5,6 +5,6 @@ require("nvim-tree").setup()
 require("lualine").setup {
   options = { theme = 'tokyonight-moon' },
 }
-require("config.hopconfig")
+require("config.pluginConfig")
 
 

@@ -5,6 +5,8 @@ key.set("i", "jk", "<ESC>")
 key.set("i", "<C-e>", "<Esc>A")
 key.set("i", "<C-q>", "<++>")
 
+key.set("n", "s", "<nop>")
+
 key.set("n", "<leader>o", "/<++><CR>:nohl<CR>c4l")
 key.set("n", "<leader>i", "?<++><CR>:nohl<CR>c4l")
 key.set("n", "<leader>nh", ":nohl<CR>")
@@ -61,5 +63,5 @@ key.set("n", "J", ":tabprevious<cr>")
 key.set("n", "K", ":tabnext<cr>")
 
 -- hop config
-key.set("n", "<C-f>", ":HopLine<CR>")
+key.set("n", "<C-f>", ":HopVertical<CR>")
 
