@@ -11,7 +11,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- 防止包裹
-opt.wrap = false
+opt.wrap = true
 
 -- 光标行
 opt.cursorline = true
@@ -48,5 +48,5 @@ vim.g.deprecation_warnings = false
 vim.cmd([[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]])
 
 -- enable spell check
-opt.spell = true
+opt.spell = false
 opt.spelllang = { "en_us" }

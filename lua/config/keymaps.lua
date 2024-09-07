@@ -65,3 +65,6 @@ key.set("n", "K", ":tabnext<cr>")
 -- hop config
 key.set("n", "<C-f>", ":HopVertical<CR>")
 
+-- terminal
+key.set("n", "<leader>gt", ":vsplit term://zsh<CR>")
+key.set("t", "jk", "<C-\\><C-n>")

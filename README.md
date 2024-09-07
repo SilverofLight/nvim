@@ -36,3 +36,7 @@
 | \<C-k\>      | n,v  | 5k                                 |
 | \<C-h\>      | n,v  | 8h                                 |
 | \<C-l\>      | n,v  | 8l                                 |
+
+## TODO:
+
+telecrope

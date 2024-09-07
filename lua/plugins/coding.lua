@@ -11,6 +11,7 @@ return {
       "hrsh7th/cmp-cmdline",
       "f3fora/cmp-spell",
     },
+    event = "InsertEnter",
   },
 
   -- auto pairs
