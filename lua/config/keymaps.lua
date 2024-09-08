@@ -17,6 +17,7 @@ key.set("n", "<leader>wq", ":wq<cr>")
 
 -- easy way to go to the end of a line
 key.set("n", "<leader>e", "$")
+key.set("v", "<leader>e", "$")
 
 -- 窗口切换
 key.set("n", "<leader>h", "<C-w>h")

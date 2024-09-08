@@ -12,7 +12,7 @@
 | \<leader\>nh | n    | :nohl                              |
 | \<leader\>qq | n    | :q                                 |
 | \<leader\>wq | n    | :wq                                |
-| \<leader\>e  | n    | $ (go to end of a line)            |
+| \<leader\>e  | n,v  | $ (go to end of a line)            |
 | \<leader\>h  | n    | go to left window                  |
 | \<leader\>l  | n    | go to right window                 |
 | \<leader\>j  | n    | go to down window                  |
