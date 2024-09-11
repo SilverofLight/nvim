@@ -64,7 +64,7 @@ key.set("n", "J", ":tabprevious<cr>")
 key.set("n", "K", ":tabnext<cr>")
 
 -- hop config
-key.set("n", "<C-f>", ":HopVertical<CR>")
+key.set("n", "<C-f>", ":HopWord<CR>")
 
 -- terminal
 key.set("n", "<leader>gt", ":vsplit term://zsh<CR>")
