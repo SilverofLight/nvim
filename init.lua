@@ -7,5 +7,6 @@ require("lualine").setup {
   options = { theme = 'tokyonight-moon' },
 }
 require("config.pluginConfig")
+require("config.neovide")
 
 
