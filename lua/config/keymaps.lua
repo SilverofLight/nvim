@@ -66,6 +66,19 @@ key.set("n", "K", ":tabnext<cr>")
 -- hop config
 key.set("n", "<C-f>", ":HopWord<CR>")
 
+-- togglewrap
+function ToggleWrap()
+  if vim.opt.wrap:get() then
+    vim.opt.wrap = false
+  else
+    vim.opt.wrap = true
+  end
+end
+
+key.set("n", "<leader>wr", [[:lua ToggleWrap()<CR>]])
+
+
+
 -- terminal
 key.set("n", "<leader>gt", ":vsplit term://zsh<CR>")
 key.set("t", "jk", "<C-\\><C-n>")
