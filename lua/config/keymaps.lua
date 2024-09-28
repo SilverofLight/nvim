@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 
 key.set("i", "jk", "<ESC>")
 key.set("i", "<C-e>", "<Esc>A")
+key.set("i", "<C-a>", "<Esc>I")
 key.set("i", "<C-q>", "<++>")
 
 key.set("n", "s", "<nop>")
@@ -18,6 +19,8 @@ key.set("n", "<leader>wq", ":wq<cr>")
 -- easy way to go to the end of a line
 key.set("n", "<leader>e", "$")
 key.set("v", "<leader>e", "$")
+key.set("n", "<leader>a", "0")
+key.set("v", "<leader>a", "0")
 
 -- 窗口切换
 key.set("n", "<leader>h", "<C-w>h")

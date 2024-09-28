@@ -20,7 +20,7 @@ cmp.setup({
     { name = "snippets"},
     { name = "buffer" },
     { name = "path" },
-    { name = "cmdline"},
+    -- { name = "cmdline"},
     { name = "spell"},
     {
       name = "latex_symbols",
