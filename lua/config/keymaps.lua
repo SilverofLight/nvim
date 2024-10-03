@@ -84,4 +84,4 @@ key.set("n", "<leader>wr", [[:lua ToggleWrap()<CR>]])
 
 -- terminal
 key.set("n", "<leader>gt", ":vsplit term://zsh<CR>")
-key.set("t", "jk", "<C-\\><C-n>")
+key.set("t", "<C-j>", "<C-\\><C-n>")
