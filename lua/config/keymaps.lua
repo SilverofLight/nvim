@@ -46,7 +46,7 @@ key.set("n", "sl", "<C-w>v")
 key.set("n", "sh", "<C-w>s")
 
 -- nvim-tree
-key.set("n", "tt", ":NvimTreeToggle<CR>")
+-- key.set("n", "tt", ":NvimTreeToggle<CR>")
 
 -- ; -> :
 key.set("n", ";", ":")
@@ -84,4 +84,4 @@ key.set("n", "<leader>wr", [[:lua ToggleWrap()<CR>]])
 
 -- terminal
 key.set("n", "<leader>gt", ":vsplit term://zsh<CR>")
-key.set("t", "<C-j>", "<C-\\><C-n>")
+key.set("t", "<C-s>", "<C-\\><C-n>")
