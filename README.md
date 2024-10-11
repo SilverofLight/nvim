@@ -28,6 +28,7 @@
 | tu           | n    | a new tabe                         |
 | J            | n    | left tabe                          |
 | K            | n    | right tabe                         |
+| sp           | n    | toogle spell                       |
 | J            | v    | move a line up                     |
 | K            | v    | move a line down                   |
 | io           | v    | \<Esc\>                            |

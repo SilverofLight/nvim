@@ -284,5 +284,20 @@
             "\\lim_{ ${1} \\to \\infty}"
         ],
         "description": "lim"
+    },
+    "sqrt": {
+        "prefix": "\\sqrt",
+        "body": [
+            "\\sqrt[]{ ${1} }"
+        ],
+        "description": "sqrt"
+    },
+    "coreWord": {
+      "prefix": "---",
+      "body": [
+          "----",
+          "> CoreWord: "
+      ],
+      "description": "line and coreWord"
     }
 }

@@ -80,7 +80,15 @@ end
 
 key.set("n", "<leader>wr", [[:lua ToggleWrap()<CR>]])
 
+function ToggleSpell()
+    if vim.opt.spell:get() then
+        vim.opt.spell = false
+    else
+        vim.opt.spell = true
+    end
+end
 
+key.set("n", "sp", [[:lua ToggleSpell()<CR>]])
 
 -- terminal
 key.set("n", "<leader>gt", ":vsplit term://zsh<CR>")
