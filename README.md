@@ -29,6 +29,7 @@
 | J            | n    | left tabe                          |
 | K            | n    | right tabe                         |
 | sp           | n    | toogle spell                       |
+| \<leader\>p  | n    | markdown preview                   |
 | J            | v    | move a line up                     |
 | K            | v    | move a line down                   |
 | io           | v    | \<Esc\>                            |
