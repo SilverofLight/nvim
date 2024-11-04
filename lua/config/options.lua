@@ -50,3 +50,7 @@ vim.cmd([[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe 
 -- enable spell check
 opt.spell = false
 opt.spelllang = { "en_us" }
+
+-- fold
+opt.foldmethod = indent
+opt.foldlevel = 99

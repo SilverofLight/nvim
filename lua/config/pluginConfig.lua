@@ -76,5 +76,11 @@ require("lspconfig")['lua_ls'].setup{
 require("lspconfig")['clangd'].setup{
   capabilities = capabilities
 }
+require("lspconfig")['ruff_lsp'].setup{
+  capabilities = capabilities
+}
+require("lspconfig")['vtsls'].setup{
+  capabilities = capabilities
+}
 
 
