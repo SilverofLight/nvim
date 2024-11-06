@@ -97,3 +97,5 @@ key.set("t", "<C-s>", "<C-\\><C-n>")
 -- markdown preview
 key.set("n", "<leader>p", ":MarkdownPreview<CR>")
 
+-- comment
+key.set("v", "<C-/>", ":normal I// <CR>")
