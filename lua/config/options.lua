@@ -12,6 +12,7 @@ opt.autoindent = true
 
 -- 防止包裹
 opt.wrap = true
+opt.linebreak = true
 
 -- 光标行
 opt.cursorline = true
