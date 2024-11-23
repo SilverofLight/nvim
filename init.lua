@@ -4,7 +4,7 @@ require("config.options")
 require("config.cursor")
 require("nvim-tree").setup()
 require("lualine").setup {
-  options = { theme = 'tokyonight-moon' },
+  options = { theme = 'dracula-nvim' },
 }
 require("config.pluginConfig")
 require("config.neovide")
