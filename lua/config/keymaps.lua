@@ -92,7 +92,7 @@ end
 key.set("n", "sp", [[:lua ToggleSpell()<CR>]])
 
 -- terminal
-key.set("n", "<leader>gt", ":vsplit term://zsh<CR>")
+key.set("n", "<leader>gt", ":vsplit term://fish<CR>")
 key.set("t", "<C-s>", "<C-\\><C-n>")
 
 -- markdown preview
