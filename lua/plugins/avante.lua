@@ -17,7 +17,7 @@ return {
 
     mappings = {
         ask = "<leader>ua",
-        edit = "<leader>ue", -- edit
+        edit = "<leader>k", -- edit
         refresh = "<leader>ur", -- refresh
     }
   },
