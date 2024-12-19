@@ -5,15 +5,15 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     -- add any opts here
-    provider = "ollama",
-    vendors = {
-      ollama = {
-        __inherited_from = "openai",
-        api_key_name = "",
-        endpoint = "http://127.0.0.1:11434/v1",
-        model = "stable-code",
-      },
-    },
+    provider = "copilot",
+    -- vendors = {
+    --   ollama = {
+    --     __inherited_from = "openai",
+    --     api_key_name = "",
+    --     endpoint = "http://127.0.0.1:11434/v1",
+    --     model = "stable-code",
+    --   },
+    -- },
 
     mappings = {
         ask = "<leader>ua",
