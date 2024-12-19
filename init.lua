@@ -9,4 +9,3 @@ require("lualine").setup {
 require("config.pluginConfig")
 require("config.neovide")
 require("config.autocmd")
-
