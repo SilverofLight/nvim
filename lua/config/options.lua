@@ -55,3 +55,6 @@ opt.spelllang = { "en_us" }
 -- fold
 opt.foldmethod = indent
 opt.foldlevel = 99
+
+-- better jump
+opt.jumpoptions = "stack"

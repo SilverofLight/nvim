@@ -6,7 +6,6 @@ return {
     opts = {
         -- add any opts here
         provider = "copilot",
-        auto_suggestions_provider = "copilot",
         -- vendors = {
         --   ollama = {
         --     __inherited_from = "openai",
@@ -22,7 +21,7 @@ return {
             refresh = "<leader>ur", -- refresh
         },
         behaviour = {
-            auto_suggestions = true, -- Experimental stage
+            auto_suggestions = false, -- Experimental stage
             auto_set_highlight_group = true,
             auto_set_keymaps = true,
             auto_apply_diff_after_generation = false,

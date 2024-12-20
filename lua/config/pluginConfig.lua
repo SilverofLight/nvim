@@ -83,7 +83,11 @@ require("lspconfig")['vtsls'].setup {
     capabilities = capabilities
 }
 
-vim.keymap.set('n', '<leader>ff', ":lua vim.lsp.buf.format()<CR>")
+vim.keymap.set('n', '<leader>ff', ":lua vim.lsp.buf.format { async = true }<CR>")
+vim.keymap.set('n', 'gd', ":lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>")
+vim.keymap.set('n', '<leader>r', ":lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set('n', 'gh', ":lua vim.lsp.buf.hover()<CR>")
 
 
 -- render markdown
