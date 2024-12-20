@@ -51,7 +51,7 @@ key.set("n", "sh", "<C-w>s")
 -- ; -> :
 key.set("n", ";", ":")
 
--- better J K 
+-- better J K
 key.set("n", "<C-j>", "5j")
 key.set("n", "<C-k>", "5k")
 key.set("v", "<C-j>", "5j")
@@ -71,11 +71,11 @@ key.set("n", "<C-f>", ":HopWord<CR>")
 
 -- togglewrap
 function ToggleWrap()
-  if vim.opt.wrap:get() then
-    vim.opt.wrap = false
-  else
-    vim.opt.wrap = true
-  end
+    if vim.opt.wrap:get() then
+        vim.opt.wrap = false
+    else
+        vim.opt.wrap = true
+    end
 end
 
 key.set("n", "<leader>wr", [[:lua ToggleWrap()<CR>]])
