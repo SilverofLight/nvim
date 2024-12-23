@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- hop
 local hop = require('hop')
 local directions = require('hop.hint').HintDirection
@@ -83,7 +84,7 @@ require("lspconfig")['vtsls'].setup {
     capabilities = capabilities
 }
 
-vim.keymap.set('n', '<leader>ff', ":lua vim.lsp.buf.format { async = true }<CR>")
+vim.keymap.set('n', '<leader>fm', ":lua vim.lsp.buf.format { async = true }<CR>")
 vim.keymap.set('n', 'gd', ":lua vim.lsp.buf.definition()<CR>")
 vim.keymap.set('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set('n', '<leader>r', ":lua vim.lsp.buf.rename()<CR>")
@@ -140,3 +141,10 @@ require('render-markdown').setup({
         },
     },
 })
+
+-- copilot
+vim.keymap.set('i', '<C-f>', 'copilot#Accept("\\<CR>")', {
+    expr = true,
+    replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
