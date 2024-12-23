@@ -74,14 +74,17 @@ require("lspconfig")['gopls'].setup {
 require("lspconfig")['lua_ls'].setup {
     capabilities = capabilities
 }
-require("lspconfig")['clangd'].setup {
-    capabilities = capabilities
-}
 require("lspconfig")['ruff'].setup {
     capabilities = capabilities
 }
 require("lspconfig")['vtsls'].setup {
     capabilities = capabilities
+}
+
+local clangd_capabilities = require("cmp_nvim_lsp").default_capabilities()
+clangd_capabilities.offsetEncoding = { "utf-16" }
+require("lspconfig")['clangd'].setup {
+    capabilities = clangd_capabilities
 }
 
 vim.keymap.set('n', '<leader>fm', ":lua vim.lsp.buf.format { async = true }<CR>")
