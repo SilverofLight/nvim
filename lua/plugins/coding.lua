@@ -96,4 +96,9 @@ return {
       -- })
     end,
   },
+
+  -- lspkind
+  {
+    "onsails/lspkind.nvim"
+  }
 }

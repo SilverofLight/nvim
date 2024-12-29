@@ -11,10 +11,17 @@ end, { silent = true })
 
 -- cmp
 local cmp = require("cmp")
+local lspkind = require('lspkind')
 cmp.setup({
+  view = {
+    entries = "custom"
+  },
+  formatting = {
+    format = lspkind.cmp_format(),
+  },
   window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
