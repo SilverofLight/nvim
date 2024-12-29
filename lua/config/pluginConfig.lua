@@ -151,3 +151,7 @@ vim.keymap.set('i', '<C-f>', 'copilot#Accept("\\<CR>")', {
     replace_keycodes = false
 })
 vim.g.copilot_no_tab_map = true
+
+--- buffer line
+vim.opt.termguicolors = true,
+require("bufferline").setup{}

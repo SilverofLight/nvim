@@ -34,7 +34,7 @@ opt.smartcase = true
 -- theme
 opt.termguicolors = true
 opt.signcolumn = "yes"
-vim.cmd[[colorscheme dracula]]
+vim.cmd([[colorscheme dracula]])
 
 -- 留下 5 行
 opt.scrolloff = 5
