@@ -7,7 +7,8 @@ return {
     "nvim-lua/plenary.nvim",
     -- you also will likely want a completion engine
     -- Saghen/blink.cmp or hrsh7th/nvim-cmp are two popular options.
-    "Saghen/blink.cmp",
+    -- "Saghen/blink.cmp",
+    "hrsh7th/nvim-cmp"
   },
 
   ---@type lean.Config

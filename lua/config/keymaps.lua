@@ -6,7 +6,7 @@ key.set("i", "<C-e>", "<Esc>A")
 key.set("i", "<C-a>", "<Esc>I")
 key.set("i", "<C-q>", "<++>")
 
-key.set("n", "s", "<nop>")
+-- key.set("n", "s", "<nop>")
 
 key.set("n", "<leader>o", "/<++><CR><cmd>nohl<CR>c4l")
 key.set("n", "<leader>i", "?<++><CR><cmd>nohl<CR>c4l")
@@ -42,8 +42,8 @@ key.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
 key.set("v", "io", "<ESC>")
 
 -- add split
-key.set("n", "sl", "<C-w>v")
-key.set("n", "sh", "<C-w>s")
+key.set("n", "<leader>|", "<C-w>v")
+key.set("n", "<leader>-", "<C-w>s")
 
 -- nvim-tree
 -- key.set("n", "tt", ":NvimTreeToggle<CR>")
@@ -67,7 +67,7 @@ key.set("n", "J", "<cmd>tabprevious<cr>")
 key.set("n", "K", "<cmd>tabnext<cr>")
 
 -- hop config
-key.set("n", "<C-f>", "<cmd>HopWord<CR>")
+key.set("n", "s", "<cmd>HopWord<CR>")
 
 -- togglewrap
 function ToggleWrap()
@@ -89,7 +89,7 @@ function ToggleSpell()
     end
 end
 
-key.set("n", "sp", [[<cmd>lua ToggleSpell()<CR>]])
+key.set("n", "<leader>us", [[<cmd>lua ToggleSpell()<CR>]])
 
 -- terminal
 key.set("n", "<leader>gt", "<cmd>vsplit term://fish<CR>")
@@ -101,4 +101,6 @@ key.set("n", "<leader>p", "<cmd>MarkdownPreview<CR>")
 -- buffer
 key.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
 key.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
+key.set("n", "<leader>bp", "<cmd>BufferLinePickClose<CR>")
 key.set("n", "<leader>bd", "<cmd>bdelete<CR>")
+
