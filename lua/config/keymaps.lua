@@ -101,8 +101,10 @@ key.set("n", "<leader>p", "<cmd>MarkdownPreview<CR>")
 -- buffer
 key.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
 key.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
-key.set("n", "<leader>bp", "<cmd>BufferLinePickClose<CR>")
+key.set("n", "<leader>bc", "<cmd>BufferLinePickClose<CR>")
+key.set("n", "<leader>bp", "<cmd>BufferLinePick<CR>")
 key.set("n", "<leader>bd", "<cmd>bdelete<CR>")
 
+-- Telescope
 vim.keymap.set('n', '<leader><leader>', "<cmd>Telescope find_files<CR>", { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<CR>", { desc = 'Telescope find files' })
