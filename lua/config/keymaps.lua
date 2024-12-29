@@ -13,7 +13,7 @@ key.set("n", "<leader>i", "?<++><CR><cmd>nohl<CR>c4l")
 key.set("n", "<leader>nh", "<cmd>nohl<CR>")
 
 -- quick quit
-key.set("n", "<leader>qq", "<cmd>q<cr>")
+key.set("n", "<leader>qq", "<cmd>quitall<cr>")
 key.set("n", "<leader>wq", "<cmd>wq<cr>")
 
 -- easy way to go to the end of a line
@@ -104,3 +104,5 @@ key.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
 key.set("n", "<leader>bp", "<cmd>BufferLinePickClose<CR>")
 key.set("n", "<leader>bd", "<cmd>bdelete<CR>")
 
+vim.keymap.set('n', '<leader><leader>', "<cmd>Telescope find_files<CR>", { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<CR>", { desc = 'Telescope find files' })
