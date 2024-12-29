@@ -8,13 +8,13 @@ key.set("i", "<C-q>", "<++>")
 
 key.set("n", "s", "<nop>")
 
-key.set("n", "<leader>o", "/<++><CR>:nohl<CR>c4l")
-key.set("n", "<leader>i", "?<++><CR>:nohl<CR>c4l")
-key.set("n", "<leader>nh", ":nohl<CR>")
+key.set("n", "<leader>o", "/<++><CR><cmd>nohl<CR>c4l")
+key.set("n", "<leader>i", "?<++><CR><cmd>nohl<CR>c4l")
+key.set("n", "<leader>nh", "<cmd>nohl<CR>")
 
 -- quick quit
-key.set("n", "<leader>qq", ":q<cr>")
-key.set("n", "<leader>wq", ":wq<cr>")
+key.set("n", "<leader>qq", "<cmd>q<cr>")
+key.set("n", "<leader>wq", "<cmd>wq<cr>")
 
 -- easy way to go to the end of a line
 key.set("n", "<leader>e", "$")
@@ -29,14 +29,14 @@ key.set("n", "<leader>k", "<C-w>k")
 key.set("n", "<leader>l", "<C-w>l")
 
 -- window resize
-key.set("n", "<up>", ":res +2<CR>")
-key.set("n", "<down>", ":res -2<CR>")
-key.set("n", "<left>", ":vertical resize -2<CR>")
-key.set("n", "<right>", ":vertical resize +2<CR>")
+key.set("n", "<up>", "<cmd>res +2<CR>")
+key.set("n", "<down>", "<cmd>res -2<CR>")
+key.set("n", "<left>", "<cmd>vertical resize -2<CR>")
+key.set("n", "<right>", "<cmd>vertical resize +2<CR>")
 
 -- move lines
-key.set("v", "J", ":m '>+1<CR>gv=gv")
-key.set("v", "K", ":m '<-2<CR>gv=gv")
+key.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
+key.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
 
 -- exit v mode
 key.set("v", "io", "<ESC>")
@@ -62,12 +62,12 @@ key.set("v", "<C-h>", "8h")
 key.set("v", "<C-l>", "8l")
 
 -- tab
-key.set("n", "tu", ":tabnew<cr>")
-key.set("n", "J", ":tabprevious<cr>")
-key.set("n", "K", ":tabnext<cr>")
+key.set("n", "tu", "<cmd>tabnew<cr>")
+key.set("n", "J", "<cmd>tabprevious<cr>")
+key.set("n", "K", "<cmd>tabnext<cr>")
 
 -- hop config
-key.set("n", "<C-f>", ":HopWord<CR>")
+key.set("n", "<C-f>", "<cmd>HopWord<CR>")
 
 -- togglewrap
 function ToggleWrap()
@@ -78,7 +78,7 @@ function ToggleWrap()
     end
 end
 
-key.set("n", "<leader>wr", [[:lua ToggleWrap()<CR>]])
+key.set("n", "<leader>wr", [[<cmd>lua ToggleWrap()<CR>]])
 key.set("n", "<C-w>", "14<C-e>")
 
 function ToggleSpell()
@@ -89,14 +89,16 @@ function ToggleSpell()
     end
 end
 
-key.set("n", "sp", [[:lua ToggleSpell()<CR>]])
+key.set("n", "sp", [[<cmd>lua ToggleSpell()<CR>]])
 
 -- terminal
-key.set("n", "<leader>gt", ":vsplit term://fish<CR>")
+key.set("n", "<leader>gt", "<cmd>vsplit term://fish<CR>")
 key.set("t", "<C-s>", "<C-\\><C-n>")
 
 -- markdown preview
-key.set("n", "<leader>p", ":MarkdownPreview<CR>")
+key.set("n", "<leader>p", "<cmd>MarkdownPreview<CR>")
 
--- comment
-key.set("v", "<C-/>", ":normal I// <CR>")
+-- buffer
+key.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
+key.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
+key.set("n", "<leader>bd", "<cmd>bdelete<CR>")
