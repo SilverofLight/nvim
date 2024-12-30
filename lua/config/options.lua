@@ -58,3 +58,7 @@ opt.foldlevel = 99
 
 -- better jump
 opt.jumpoptions = "stack"
+
+-- undo
+opt.undofile = true
+opt.undolevels = 10000
