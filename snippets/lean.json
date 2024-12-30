@@ -1,0 +1,20 @@
+{
+  "theorem": {
+    "prefix": "theorem",
+    "body": "theorem ${1:name}\n\t<++>",
+    "description": "theorem"
+  },
+  "import": {
+    "prefix": "import",
+    "body": "import Mathlib.Data.Real.Basic\nimport Mathlib.Tactic.Ring\nimport Mathlib.Algebra.Ring.Basic\nimport Mathlib.Tactic.Linarith",
+    "description": "import Mathlib"
+  },
+  "exact": {
+    "prefix": "exact",
+    "body": "exact exact ⟨ ${1:ob1},${2:ob2} ⟩"
+  },
+  "have": {
+    "prefix": "have",
+    "body": "have ${1:name}: ${2:body} := by<++>"
+  }
+}

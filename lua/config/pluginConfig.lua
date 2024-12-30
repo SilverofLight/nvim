@@ -38,16 +38,31 @@ cmp.setup({
     }
   }),
   mapping = cmp.mapping.preset.insert({
-    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    -- ["<leader><leader>"] = cmp.mapping.complete(),
-    -- ["<CR>"] = cmp.mapping.confirm({ select = true }),
-    ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-    -- ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    ["<C-CR>"] = function(fallback)
-      cmp.abort()
-      fallback()
-    end,
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        -- You could replace select_next_item() with confirm({ select = true }) to get VS Code autocompletion behavior
+        cmp.select_next_item()
+      elseif vim.snippet.active({ direction = 1 }) then
+        vim.schedule(function()
+          vim.snippet.jump(1)
+        end)
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif vim.snippet.active({ direction = -1 }) then
+        vim.schedule(function()
+          vim.snippet.jump(-1)
+        end)
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
   }),
   experimental = {
     ghost_text = false,
@@ -165,12 +180,12 @@ vim.opt.termguicolors = true,
 
 -- neoscroll animation
 require('neoscroll').setup({
-  mappings = {                 -- Keys to be mapped to their corresponding default scrolling animation
+  mappings = { -- Keys to be mapped to their corresponding default scrolling animation
     '<C-u>', '<C-d>',
     '<C-b>', '<C-f>',
     '<C-y>', '<C-e>',
   },
-  hide_cursor = false,          -- Hide cursor while scrolling
+  hide_cursor = false,         -- Hide cursor while scrolling
   stop_eof = true,             -- Stop at <EOF> when scrolling downwards
   respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
   cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
@@ -180,12 +195,12 @@ require('neoscroll').setup({
   post_hook = nil,             -- Function to run after the scrolling animation ends
   performance_mode = false,    -- Disable "Performance Mode" on all buffers.
   ignored_events = {           -- Events ignored while scrolling
-      'WinScrolled', 'CursorMoved'
+    'WinScrolled', 'CursorMoved'
   },
 })
 
 -- git signs
-require('gitsigns').setup{
+require('gitsigns').setup {
   on_attach = function(bufnr)
     local gitsigns = require('gitsigns')
 
@@ -198,7 +213,7 @@ require('gitsigns').setup{
     -- Navigation
     map('n', ']c', function()
       if vim.wo.diff then
-        vim.cmd.normal({']c', bang = true})
+        vim.cmd.normal({ ']c', bang = true })
       else
         gitsigns.nav_hunk('next')
       end
@@ -206,11 +221,10 @@ require('gitsigns').setup{
 
     map('n', '[c', function()
       if vim.wo.diff then
-        vim.cmd.normal({'[c', bang = true})
+        vim.cmd.normal({ '[c', bang = true })
       else
         gitsigns.nav_hunk('prev')
       end
     end)
-
   end
 }
