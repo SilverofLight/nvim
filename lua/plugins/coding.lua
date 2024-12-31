@@ -33,17 +33,10 @@ return {
         ['<C-e>'] = { 'hide', 'fallback' },
 
         ['<Tab>'] = {
-          function(cmp)
-            if cmp.snippet_active() then
-              return cmp.accept()
-            else
-              return cmp.select_and_accept()
-            end
-          end,
-          'snippet_forward',
+          'select_next',
           'fallback'
         },
-        ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
+        ['<S-Tab>'] = { 'select_prev', 'fallback' },
 
         ['<Up>'] = { 'select_prev', 'fallback' },
         ['<Down>'] = { 'select_next', 'fallback' },
@@ -68,6 +61,9 @@ return {
           auto_brackets = {
             enabled = true
           }
+        },
+        list = {
+          selection = "auto_insert"
         },
         menu = {
           draw = {
