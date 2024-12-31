@@ -39,7 +39,3 @@
 | \<C-h\>      | n,v  | 8h                                 |
 | \<C-l\>      | n,v  | 8l                                 |
 | <leader>wr   | n    | toggle wrap                        |
-
-## TODO:
-
-telecrope
