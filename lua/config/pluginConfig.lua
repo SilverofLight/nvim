@@ -12,6 +12,11 @@ end, { silent = true })
 -- cmp
 local cmp = require("cmp")
 local lspkind = require('lspkind')
+
+local has_words_before = function()
+  local col = vim.fn.col('.') - 1
+  return col > 0 and vim.fn.getline('.'):sub(col, col):match('%s') == nil
+end
 cmp.setup({
   view = {
     entries = "custom"
