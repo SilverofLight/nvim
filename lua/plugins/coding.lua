@@ -15,6 +15,7 @@ return {
   -- },
   {
     'saghen/blink.cmp',
+    vscode = false,
     -- optional: provides snippets for the snippet source
     -- dependencies = 'rafamadriz/friendly-snippets',
 
@@ -30,22 +31,10 @@ return {
       -- See the full "keymap" documentation for information on defining your own keymap.
       keymap = {
         preset = 'super-tab'
-        -- ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-        -- ['<C-e>'] = { 'hide', 'fallback' },
-        --
         -- ['<Tab>'] = {
         --   'accept',
         --   'fallback'
         -- },
-        -- ['<S-Tab>'] = { 'select_prev', 'fallback' },
-        --
-        -- ['<Up>'] = { 'select_prev', 'fallback' },
-        -- ['<Down>'] = { 'select_next', 'fallback' },
-        -- ['<C-p>'] = { 'select_prev', 'fallback' },
-        -- ['<C-n>'] = { 'select_next', 'fallback' },
-        --
-        -- ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
-        -- ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
       },
 
       appearance = {
