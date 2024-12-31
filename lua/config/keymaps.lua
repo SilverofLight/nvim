@@ -79,7 +79,6 @@ function ToggleWrap()
 end
 
 key.set("n", "<leader>wr", [[<cmd>lua ToggleWrap()<CR>]])
-key.set("n", "<C-w>", "14<C-e>")
 
 function ToggleSpell()
     if vim.opt.spell:get() then
