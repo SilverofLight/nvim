@@ -81,3 +81,24 @@ cmp.setup.cmdline(':', {
   }),
   matching = { disallow_symbol_nonprefix_matching = false }
 })
+
+-- setup lsp
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+require("lspconfig")['gopls'].setup {
+  capabilities = capabilities
+}
+require("lspconfig")['lua_ls'].setup {
+  capabilities = capabilities
+}
+require("lspconfig")['ruff'].setup {
+  capabilities = capabilities
+}
+require("lspconfig")['vtsls'].setup {
+  capabilities = capabilities
+}
+
+local clangd_capabilities = require("cmp_nvim_lsp").default_capabilities()
+clangd_capabilities.offsetEncoding = { "utf-16" }
+require("lspconfig")['clangd'].setup {
+  capabilities = clangd_capabilities
+}

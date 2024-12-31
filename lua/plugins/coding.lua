@@ -135,7 +135,7 @@ return {
   -- },
 
   -- lspkind
-  {
-    "onsails/lspkind.nvim"
-  }
+  -- {
+  --   "onsails/lspkind.nvim"
+  -- }
 }

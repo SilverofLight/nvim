@@ -10,26 +10,6 @@ vim.keymap.set('', 'F', function()
 end, { silent = true })
 
 
--- setup lsp
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-require("lspconfig")['gopls'].setup {
-  capabilities = capabilities
-}
-require("lspconfig")['lua_ls'].setup {
-  capabilities = capabilities
-}
-require("lspconfig")['ruff'].setup {
-  capabilities = capabilities
-}
-require("lspconfig")['vtsls'].setup {
-  capabilities = capabilities
-}
-
-local clangd_capabilities = require("cmp_nvim_lsp").default_capabilities()
-clangd_capabilities.offsetEncoding = { "utf-16" }
-require("lspconfig")['clangd'].setup {
-  capabilities = clangd_capabilities
-}
 
 vim.keymap.set('n', '<leader>fm', ":lua vim.lsp.buf.format { async = true }<CR>")
 vim.keymap.set('n', 'gd', ":lua vim.lsp.buf.definition()<CR>")
@@ -37,6 +17,20 @@ vim.keymap.set('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set('n', '<leader>r', ":lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set('n', 'gh', ":lua vim.lsp.buf.hover()<CR>")
 
+-- lsp
+local capabilities = require('blink.cmp').get_lsp_capabilities()
+local lspconfig = require('lspconfig')
+
+lspconfig['lua_ls'].setup({ capabilities = capabilities })
+lspconfig['gopls'].setup({ capabilities = capabilities })
+lspconfig['ruff'].setup({ capabilities = capabilities })
+lspconfig['vtsls'].setup({ capabilities = capabilities })
+
+local clangd_capabilities = require("blink.cmp").get_lsp_capabilities()
+clangd_capabilities.offsetEncoding = { "utf-16" }
+require("lspconfig")['clangd'].setup {
+  capabilities = clangd_capabilities
+}
 
 
 -- copilot
@@ -100,4 +94,3 @@ require('gitsigns').setup {
     end)
   end
 }
-
