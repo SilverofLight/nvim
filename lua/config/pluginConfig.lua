@@ -9,7 +9,8 @@ vim.keymap.set('', 'F', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
 end, { silent = true })
 
-
+-- blink.cmp ghost color
+vim.api.nvim_set_hl(0, 'BlinkCmpGhostText', { fg = '#5E81AC' })
 
 vim.keymap.set('n', '<leader>fm', ":lua vim.lsp.buf.format { async = true }<CR>")
 vim.keymap.set('n', 'gd', ":lua vim.lsp.buf.definition()<CR>")
