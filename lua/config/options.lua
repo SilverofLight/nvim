@@ -62,3 +62,6 @@ opt.jumpoptions = "stack"
 -- undo
 opt.undofile = true
 opt.undolevels = 10000
+
+-- confirm to save changes
+opt.confirm = true
