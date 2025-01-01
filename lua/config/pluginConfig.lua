@@ -9,8 +9,6 @@ vim.keymap.set('', 'F', function()
   hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
 end, { silent = true })
 
--- blink.cmp ghost color
-vim.api.nvim_set_hl(0, 'BlinkCmpGhostText', { fg = '#5E81AC' })
 
 vim.keymap.set('n', '<leader>fm', ":lua vim.lsp.buf.format { async = true }<CR>")
 vim.keymap.set('n', 'gd', ":lua vim.lsp.buf.definition()<CR>")
@@ -18,20 +16,25 @@ vim.keymap.set('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set('n', '<leader>r', ":lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set('n', 'gh', ":lua vim.lsp.buf.hover()<CR>")
 
--- lsp
-local capabilities = require('blink.cmp').get_lsp_capabilities()
-local lspconfig = require('lspconfig')
+if ~vim.g.vscode then
+  -- blink.cmp ghost color
+  vim.api.nvim_set_hl(0, 'BlinkCmpGhostText', { fg = '#5E81AC' })
 
-lspconfig['lua_ls'].setup({ capabilities = capabilities })
-lspconfig['gopls'].setup({ capabilities = capabilities })
-lspconfig['ruff'].setup({ capabilities = capabilities })
-lspconfig['vtsls'].setup({ capabilities = capabilities })
+  -- lsp
+  local capabilities = require('blink.cmp').get_lsp_capabilities()
+  local lspconfig = require('lspconfig')
 
-local clangd_capabilities = require("blink.cmp").get_lsp_capabilities()
-clangd_capabilities.offsetEncoding = { "utf-16" }
-require("lspconfig")['clangd'].setup {
-  capabilities = clangd_capabilities
-}
+  lspconfig['lua_ls'].setup({ capabilities = capabilities })
+  lspconfig['gopls'].setup({ capabilities = capabilities })
+  lspconfig['ruff'].setup({ capabilities = capabilities })
+  lspconfig['vtsls'].setup({ capabilities = capabilities })
+
+  local clangd_capabilities = require("blink.cmp").get_lsp_capabilities()
+  clangd_capabilities.offsetEncoding = { "utf-16" }
+  require("lspconfig")['clangd'].setup {
+    capabilities = clangd_capabilities
+  }
+end
 
 
 -- copilot
