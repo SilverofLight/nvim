@@ -16,7 +16,7 @@ vim.keymap.set('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set('n', '<leader>r', ":lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set('n', 'gh', ":lua vim.lsp.buf.hover()<CR>")
 
-if ~vim.g.vscode then
+if not vim.g.vscode then
   -- blink.cmp ghost color
   vim.api.nvim_set_hl(0, 'BlinkCmpGhostText', { fg = '#5E81AC' })
 
