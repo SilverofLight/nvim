@@ -299,5 +299,266 @@
           "> CoreWord: "
       ],
       "description": "line and coreWord"
+    },
+    "quad": {
+      "prefix": "\\quad",
+      "body": "\\quad",
+      "description": "\\quad空格"
+    },
+    "gets": {
+      "prefix": "\\gets",
+      "body": "\\gets",
+      "description": "\\gets左箭头"
+    },
+    "left": {
+      "prefix": "\\left",
+      "body": "\\gets",
+      "description": "\\gets左箭头"
+    },
+   "to": {
+        "prefix": "\\to",
+        "body": "\\to",
+        "description": "\\to右箭头 →"
+    },
+    "longleftarrow": {
+        "prefix": "\\longleftarrow",
+        "body": "\\longleftarrow",
+        "description": "\\longleftarrow长左箭头"
+    },
+    "longrightarrow": {
+        "prefix": "\\longrightarrow",
+        "body": "\\longrightarrow",
+        "description": "\\longrightarrow长右箭头"
+    },
+    "times": {
+        "prefix": "\\times",
+        "body": "\\times",
+        "description": "\\times乘"
+    },
+    "div": {
+        "prefix": "\\div",
+        "body": "\\div",
+        "description": "\\div除"
+    },
+    "pm": {
+        "prefix": "\\pm",
+        "body": "\\pm",
+        "description": "\\pm加减"
+    },
+    "cdot": {
+        "prefix": "\\cdot",
+        "body": "\\cdot",
+        "description": "\\cdot点"
+    },
+    "sqrt": {
+        "prefix": "\\sqrt",
+        "body": "\\sqrt[]{ <++> }",
+        "description": "\\sqrt根号"
+    },
+    "cdots": {
+        "prefix": "\\cdots",
+        "body": "\\cdots",
+        "description": "\\cdots省略号"
+    },
+    "because": {
+        "prefix": "\\because",
+        "body": "\\because",
+        "description": "\\because因为"
+    },
+    "therefore": {
+        "prefix": "\\therefore",
+        "body": "\\therefore",
+        "description": "\\therefore所以"
+    },
+    "forall": {
+        "prefix": "\\forall",
+        "body": "\\forall",
+        "description": "\\forall任意"
+    },
+    "exists": {
+        "prefix": "\\exists",
+        "body": "\\exists",
+        "description": "\\exists存在"
+    },
+    "le": {
+        "prefix": "\\le",
+        "body": "\\le",
+        "description": "\\le小于等于"
+    },
+    "ge": {
+        "prefix": "\\ge",
+        "body": "\\ge",
+        "description": "\\ge大于等于"
+    },
+    "ne": {
+        "prefix": "\\ne",
+        "body": "\\ne",
+        "description": "\\ne不等于"
+    },
+    "approx": {
+        "prefix": "\\approx",
+        "body": "\\approx",
+        "description": "\\approx约等于"
+    },
+    "matrix": {
+        "prefix": "\\matrix",
+        "body": [ 
+          "\\begin{bmatrix}",
+          " <++> & <++> \\\\",
+          " <++> & <++> \\\\",
+          "\\end{bmatrix}"
+        ],
+        "description": "\\matrix矩阵"
+    },
+    "vmatrix": {
+        "prefix": "\\vmatrix",
+        "body": [
+          "\\begin{vmatrix}",
+          " <++> & <++> \\\\", 
+          " <++> & <++> \\\\",
+          "\\end{vmatrix}"
+        ],
+        "description": "\\vmatrix行列式"
+    },
+    "align": {
+        "prefix": "\\align",
+        "body": [
+          "\\begin{align*}",
+          " <++> & = <++> \\\\",
+          " & = <++> \\\\",
+          "\\end{align*}"
+        ],
+        "description": "\\align方程序列"
+    },
+    "cases": {
+        "prefix": "\\cases",
+        "body": [
+          "f{(n)} = ",
+          "\\begin{cases}",
+          " <++>, & <++> \\",
+          " <++>, & <++> \\",
+          "\\end{cases}"
+        ],
+        "description": "\\cases条件表达式"
+    },
+    "Delta": {
+        "prefix": "\\Delta",
+        "body": "\\Delta",
+        "description": "\\Delta Δ"
+    },
+    "Theta": {
+        "prefix": "\\Theta",
+        "body": "\\Theta",
+        "description": "\\Theta Θ"
+    },
+    "Sigma": {
+        "prefix": "\\Sigma",
+        "body": "\\Sigma",
+        "description": "\\Sigma Σ"
+    },
+    "Phi": {
+        "prefix": "\\Phi",
+        "body": "\\Phi",
+        "description": "\\Phi Φ"
+    },
+    "Psi": {
+        "prefix": "\\Psi",
+        "body": "\\Psi",
+        "description": "\\Psi Ψ"
+    },
+    "Omega": {
+        "prefix": "\\Omega",
+        "body": "\\Omega",
+        "description": "\\Omega Ω"
+    },
+    "alpha": {
+        "prefix": "\\alpha",
+        "body": "\\alpha",
+        "description": "\\alpha α"
+    },
+    "beta": {
+        "prefix": "\\beta",
+        "body": "\\beta",
+        "description": "\\beta β"
+    },
+    "gamma": {
+        "prefix": "\\gamma",
+        "body": "\\gamma",
+        "description": "\\gamma γ"
+    },
+    "delta": {
+        "prefix": "\\delta",
+        "body": "\\delta",
+        "description": "\\delta δ"
+    },
+    "upepsilon": {
+        "prefix": "\\upepsilon",
+        "body": "\\upepsilon",
+        "description": "\\upepsilon ε"
+    },
+    "zeta": {
+        "prefix": "\\zeta",
+        "body": "\\zeta",
+        "description": "\\zeta ζ"
+    },
+    "eta": {
+        "prefix": "\\eta",
+        "body": "\\eta",
+        "description": "\\eta η"
+    },
+    "theta": {
+        "prefix": "\\theta",
+        "body": "\\theta",
+        "description": "\\theta θ"
+    },
+    "lambda": {
+        "prefix": "\\lambda",
+        "body": "\\lambda",
+        "description": "\\lambda λ"
+    },
+    "mu": {
+        "prefix": "\\mu",
+        "body": "\\mu",
+        "description": "\\mu μ"
+    },
+    "nu": {
+        "prefix": "\\nu",
+        "body": "\\nu",
+        "description": "\\nu ν"
+    },
+    "pi": {
+        "prefix": "\\pi",
+        "body": "\\pi",
+        "description": "\\pi π"
+    },
+    "rho": {
+        "prefix": "\\rho",
+        "body": "\\rho",
+        "description": "\\rho ρ"
+    },
+    "sigma": {
+        "prefix": "\\sigma",
+        "body": "\\sigma",
+        "description": "\\sigma σ"
+    },
+    "tau": {
+        "prefix": "\\tau",
+        "body": "\\tau",
+        "description": "\\tau τ"
+    },
+    "psi": {
+        "prefix": "\\psi",
+        "body": "\\psi",
+        "description": "\\psi ψ"
+    },
+    "omega": {
+        "prefix": "\\omega",
+        "body": "\\omega",
+        "description": "\\omega ω"
+    },
+    "phi": {
+        "prefix": "\\phi",
+        "body": "\\phi",
+        "description": "\\phi ϕ"
     }
 }
