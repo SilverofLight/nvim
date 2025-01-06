@@ -28,6 +28,7 @@ if not vim.g.vscode then
   lspconfig['gopls'].setup({ capabilities = capabilities })
   lspconfig['ruff'].setup({ capabilities = capabilities })
   lspconfig['vtsls'].setup({ capabilities = capabilities })
+  lspconfig['bashls'].setup({ capabilities = capabilities })
 
   local clangd_capabilities = require("blink.cmp").get_lsp_capabilities()
   clangd_capabilities.offsetEncoding = { "utf-16" }

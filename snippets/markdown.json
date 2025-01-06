@@ -491,10 +491,10 @@
         "body": "\\delta",
         "description": "\\delta δ"
     },
-    "upepsilon": {
-        "prefix": "\\upepsilon",
-        "body": "\\upepsilon",
-        "description": "\\upepsilon ε"
+    "epsilon": {
+        "prefix": "\\epsilon",
+        "body": "\\epsilon",
+        "description": "\\epsilon ε"
     },
     "zeta": {
         "prefix": "\\zeta",
