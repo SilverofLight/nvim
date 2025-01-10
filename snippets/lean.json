@@ -1,7 +1,7 @@
 {
   "theorem": {
     "prefix": "theorem",
-    "body": "theorem ${1:name}\n\t<++>",
+    "body": "theorem ${1:name}\n\t(<++> :ℚ)\n\t(h1: <++>)\n\t(h2: <++>)\n\t(h3: <++>)\n\t: <++> := by <++>",
     "description": "theorem"
   },
   "import": {
@@ -11,7 +11,7 @@
   },
   "exact": {
     "prefix": "exact",
-    "body": "exact exact ⟨ ${1:ob1},${2:ob2} ⟩"
+    "body": "exact ⟨ ${1},<++> ⟩"
   },
   "have": {
     "prefix": "have",
