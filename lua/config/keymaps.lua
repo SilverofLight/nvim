@@ -5,6 +5,7 @@ key.set("i", "jk", "<ESC>")
 key.set("i", "<C-e>", "<Esc>A")
 key.set("i", "<C-a>", "<Esc>I")
 key.set("i", "<C-q>", "<++>")
+key.set("i", "<esc>", "<esc>")
 
 -- key.set("n", "s", "<nop>")
 
@@ -52,14 +53,19 @@ key.set("n", "<leader>-", "<C-w>s")
 key.set("n", ";", ":")
 
 -- better J K
-key.set("n", "<C-j>", "5j")
-key.set("n", "<C-k>", "5k")
-key.set("v", "<C-j>", "5j")
-key.set("v", "<C-k>", "5k")
+key.set("n", "<C-j>", "5gj")
+key.set("n", "<C-k>", "5gk")
+key.set("v", "<C-j>", "5gj")
+key.set("v", "<C-k>", "5gk")
 key.set("n", "<C-h>", "8h")
 key.set("n", "<C-l>", "8l")
 key.set("v", "<C-h>", "8h")
 key.set("v", "<C-l>", "8l")
+
+key.set("n", "j", "gj")
+key.set("n", "k", "gk")
+key.set("v", "j", "gj")
+key.set("v", "k", "gk")
 
 -- tab
 key.set("n", "tu", "<cmd>tabnew<cr>")
