@@ -13,7 +13,7 @@ return {
         timeout = 30000, -- Timeout in milliseconds
         temperature = 0,
         max_tokens = 4096,
-        -- api_key_name = "OPENAI_API"
+        api_key_name = "DEEPSEEK_API_KEY"
       },
       behaviour = {
         auto_suggestions = true, -- Experimental stage
