@@ -6,7 +6,7 @@
   },
   "import": {
     "prefix": "import",
-    "body": "import Mathlib.Data.Real.Basic\nimport Mathlib.Tactic.Ring\nimport Mathlib.Algebra.Ring.Basic\nimport Mathlib.Tactic.Linarith",
+    "body": "import Mathlib.Tactic.Linarith",
     "description": "import Mathlib"
   },
   "exact": {
