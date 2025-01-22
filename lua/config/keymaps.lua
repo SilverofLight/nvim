@@ -36,8 +36,8 @@ key.set("n", "<left>", "<cmd>vertical resize -2<CR>")
 key.set("n", "<right>", "<cmd>vertical resize +2<CR>")
 
 -- move lines
-key.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
-key.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
+-- key.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
+-- key.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
 
 -- exit v mode
 key.set("v", "io", "<ESC>")

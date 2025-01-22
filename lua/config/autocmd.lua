@@ -67,18 +67,18 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Set custom prompt for Lean files
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("lean_prompt"),
-  pattern = "lean",
-  callback = function()
-    vim.notify("Lean mode activated: Proof assistant prompt enabled", vim.log.levels.INFO, {
-      title = "Avante",
-      icon = "", -- nerd font icon for lean
-      timeout = 2000
-    })
-    require("avante.config").override({
-      system_prompt =
-      "Do not change my original code. If my proof process is incorrect, do not modify it, but continue to suggest according to my approach and get the wrong answer; do not use ring tactic when suggesting; do not use ring tactic when suggesting"
-    })
-  end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--   group = augroup("lean_prompt"),
+--   pattern = "lean",
+--   callback = function()
+--     vim.notify("Lean mode activated: Proof assistant prompt enabled", vim.log.levels.INFO, {
+--       title = "Avante",
+--       icon = "", -- nerd font icon for lean
+--       timeout = 2000
+--     })
+--     require("avante.config").override({
+--       system_prompt =
+--       "Do not change my original code. If my proof process is incorrect, do not modify it, but continue to suggest according to my approach and get the wrong answer; do not use ring tactic when suggesting; do not use ring tactic when suggesting"
+--     })
+--   end,
+-- })
