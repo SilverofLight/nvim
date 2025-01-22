@@ -99,3 +99,8 @@ require('gitsigns').setup {
     end)
   end
 }
+
+-- avante
+vim.keymap.set("n", "ta", "<cmd>AvanteToggle<CR>")
+vim.keymap.set("v", "<leader>ta", "<cmd>AvanteAsk<CR>")
+vim.keymap.set("v", "<leader>te", "<cmd>AvanteEdit<CR>")
