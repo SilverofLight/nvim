@@ -26,7 +26,8 @@ return {
     ---@type blink.cmp.Config
     opts = {
       keymap = {
-        preset = 'super-tab'
+        preset = 'super-tab',
+        ['<C-r>'] = {'show', 'fallback'}
         -- ['<Tab>'] = {
         --   'accept',
         --   'fallback'
