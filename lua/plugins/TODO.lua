@@ -8,10 +8,11 @@ return {
     keywords = {
       MARK = { icon = "", color = "info" }
     },
-    highlight = {
-      keyword = "bg",
-      pattern = [[.*<(KEYWORDS)\s*]],
-      comments_only = false,
-    },
+    -- highlight = {
+    --   keyword = "bg",
+    --   pattern = [[.*<(KEYWORDS)\s*]],
+    --   comments_only = false,
+    -- },
+    -- INFO:
   }
 }
