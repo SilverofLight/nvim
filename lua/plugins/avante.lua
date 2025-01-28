@@ -88,7 +88,7 @@ return {
             hide_during_completion = true,
             debounce = 75,
             keymap = {
-              accept = "<C-l>",
+              accept = false,
               accept_word = "<C-e>",
               accept_line = "<C-i>",
               next = "<C-]>",
@@ -107,6 +107,9 @@ return {
             cvs = false,
             ["."] = false,
           },
+          vim.keymap.set("i", "<C-l>", function()
+            require('copilot.suggestion').accept()
+          end),
           copilot_node_command = 'node', -- Node.js version must be > 18.x
           server_opts_overrides = {},
         }

@@ -27,7 +27,18 @@ return {
     opts = {
       keymap = {
         preset = 'super-tab',
-        ['<C-r>'] = {'show', 'fallback'}
+        ['<C-r>'] = { 'show', 'fallback' },
+        ['<Tab>'] = {
+          function(cmp)
+            if cmp.snippet_active() then
+              return cmp.accept()
+            else
+              return cmp.select_and_accept()
+            end
+          end,
+          'snippet_forward',
+          'fallback'
+        },
         -- ['<Tab>'] = {
         --   'accept',
         --   'fallback'
@@ -70,9 +81,9 @@ return {
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
-          default = { 'lsp', 'path', 'snippets', 'buffer' },
-          cmdline = { 'path', 'cmdline' }
-        },
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        cmdline = { 'path', 'cmdline' }
+      },
     },
   },
 
