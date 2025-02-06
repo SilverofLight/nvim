@@ -7,6 +7,6 @@ return {
       }
     })
   end,
-  vim.keymap.set("n", "<leader>t", ":TranslateNormal<CR>"),
-  vim.keymap.set("v", "<leader>t", ":TranslateVisual<CR>")
+  vim.keymap.set("n", "<leader>t", "<cmd>TranslateNormal<CR>"),
+  vim.keymap.set("v", "<leader>t", "<cmd>TranslateVisual<CR>")
 }
