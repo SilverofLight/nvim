@@ -65,3 +65,6 @@ opt.undolevels = 10000
 
 -- confirm to save changes
 opt.confirm = true
+
+-- notify
+vim.notify = require("notify")
