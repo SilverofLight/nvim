@@ -9,8 +9,10 @@ return {
   },
   {
     "rcarriga/nvim-notify",
-    config = function()
-      vim.notify = require("notify")
+    config = function ()
+      require("notify").setup({
+        top_down = false
+      })
     end
   }
 }
